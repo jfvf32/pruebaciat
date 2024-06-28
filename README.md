@@ -58,33 +58,33 @@ Una para las parcelas y otra para la  actividades
 
 ### Paso 1: Crear Dockerfile para el Backend
 backend/Dockerfile:
+```
+# Utiliza la imagen base de Node.js versión 14
 
-- Utiliza la imagen base de Node.js versión 14
-```
   FROM node:14
-```
-- Establece el directorio de trabajo dentro del contenedor
-```
+
+# Establece el directorio de trabajo dentro del contenedor
+
 WORKDIR /app
-```
-- Copia los archivos package.json y package-lock.json al directorio de trabajo
-```
+
+#Copia los archivos package.json y package-lock.json al directorio de trabajo
+
 COPY package*.json ./
-```
-- Instala las dependencias definidas en package.json
-```
+
+#Instala las dependencias definidas en package.json
+
 RUN npm install
-```
-- Copia todos los archivos del proyecto al directorio de trabajo
-```
+
+# Copia todos los archivos del proyecto al directorio de trabajo
+
 COPY . .
-```
-- Expone el puerto 5000 para que la aplicación sea accesible desde fuera del contenedor
-```
+
+# Expone el puerto 5000 para que la aplicación sea accesible desde fuera del contenedor
+
 EXPOSE 5000
-```
-- Define el comando por defecto para ejecutar la aplicación
-```
+
+# Define el comando por defecto para ejecutar la aplicación
+
 CMD ["node", "index.js"]
 ```
 
