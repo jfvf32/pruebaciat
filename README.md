@@ -38,31 +38,31 @@ Utilizaremos una base de datos SQLite con dos tablas principales:
 Una para las parcelas y otra para la  actividades
 
 # TPropuesta de tabla para parcelas:
-id: INTEGER PRIMARY KEY AUTOINCREMENT
-nombre: TEXT NOT NULL
-latitud: REAL NOT NULL
-longitud: REAL NOT NULL
-tamano: REAL NOT NULL
-cultivo: TEXT NOT NULL
+-id: INTEGER PRIMARY KEY AUTOINCREMENT
+-nombre: TEXT NOT NULL
+-latitud: REAL NOT NULL
+-longitud: REAL NOT NULL
+-tamano: REAL NOT NULL
+-cultivo: TEXT NOT NULL
 
 # Propuesta de tabla actividades:
-id: INTEGER PRIMARY KEY AUTOINCREMENT
-parcela_id: INTEGER
-fecha: TEXT NOT NULL
-actividad: TEXT NOT NULL
-insumos_utilizados: TEXT
-duracion: REAL NOT NULL
-FOREIGN KEY (parcela_id) REFERENCES parcelas (id)
+-id: INTEGER PRIMARY KEY AUTOINCREMENT
+-parcela_id: INTEGER
+-fecha: TEXT NOT NULL
+-actividad: TEXT NOT NULL
+-insumos_utilizados: TEXT
+-duracion: REAL NOT NULL
+-FOREIGN KEY (parcela_id) REFERENCES parcelas (id)
 
 Sistema de Información
 
 ### Paso 1: Crear Dockerfile para el Backend
 backend/Dockerfile:
 
-Utiliza la imagen base de Node.js versión 14
-FROM node:14
-Establece el directorio de trabajo dentro del contenedor
-WORKDIR /app
+-Utiliza la imagen base de Node.js versión 14
+-FROM node:14
+-Establece el directorio de trabajo dentro del contenedor
+-WORKDIR /app
 
 Copia los archivos package.json y package-lock.json al directorio de trabajo
 COPY package*.json ./
