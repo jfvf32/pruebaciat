@@ -173,5 +173,5 @@ docker-compose up --build
 ```
 - la aplicación frontend en
 ```
-  http://localhost:3000.
+  http://localhost:3000
 ```
