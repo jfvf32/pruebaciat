@@ -1,12 +1,10 @@
 # pruebaciat: Juan Felipe Velasquez Franco - Aspirante a la vacante Desarrollador Full Stack 
 ### Climate Action Program.
 
-Por temas de tiempo, queda pendiente la creacion de los archivos index.js y package.js para el despliegue en docker. 
-
-De igual manera la creacion de la base de datos para almacenar datos. 
-Estos datos los dejo de forma netamente ilustrativa para dar a entender de que forma visualizo la ejecucion de este proyecto.
+Por temas de tiempo, queda pendiente la creacion de los archivos index.js y package.js para el despliegue en docker. De igual manera la creacion de la base de datos para almacenar datos. 
 En estos momentos es posible crear el contenedor pero con errores.
 
+Estos datos los dejo de forma netamente ilustrativa para dar a entender de que forma visualizo la ejecucion de este proyecto. Gracias por la oportunidad. 
 
 ### PROPUESTA:
  ### MONITOR AGRONOMO: OPTIMIZACION DE LAS OPERACIONES AGRICOLAS CON TECNOLOGIA  
