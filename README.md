@@ -125,28 +125,28 @@ CMD ["npm", "start"]
 
 #### Paso 3: Configurar Docker Compose
 ```
-docker-compose.yml:
 
 version: '3.8'
 
 services:
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     ports:
       - "5000:5000"
-    volumes:
-      - ./backend:/app
     environment:
-      - DATABASE_URL=sqlite:///app/db.sqlite
+      - NODE_ENV=production
+    # Puedes añadir más configuraciones según sea necesario
 
   frontend:
-    build: ./frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/app
-    environment:
-      - REACT_APP_API_URL=http://localhost:5000
+    # Puedes añadir más configuraciones según sea necesario
+
 
 ```
 
