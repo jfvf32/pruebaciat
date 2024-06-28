@@ -174,3 +174,5 @@ docker-compose up --build
 ```
   http://localhost:3000
 ```
+
+### En teoria al momento de ejecutar el usuario debe poder realizar las consultar relevantes que considere, al igual que realizar el registro de los datos que requiera en su momento con el acceso a la herramienta 
