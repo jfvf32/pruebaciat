@@ -63,11 +63,11 @@ backend/Dockerfile:
 
 FROM node:14
 
-WORKDIR /app
+WORKDIR /app/frontend
 
 #Copia los archivos package.json y package-lock.json al directorio de trabajo
 
-COPY package*.json ./
+COPY backend/package*.json ./
 
 #Instala las dependencias definidas en package.json
 
@@ -75,7 +75,7 @@ RUN npm install
 
 # Copia todos los archivos del proyecto al directorio de trabajo
 
-COPY . .
+COPY backend .
 
 # Expone el puerto 5000 para que la aplicación sea accesible desde fuera del contenedor
 
@@ -94,11 +94,11 @@ CMD ["node", "index.js"]
   
 FROM node:14
   
-WORKDIR /app
+WORKDIR /app/frontend
 
 #Copia los archivos package.json y package-lock.json al directorio de trabajo
 
-COPY package*.json ./
+COPY frontend/package*.json ./
 
 #Instala las dependencias definidas en package.json
   
@@ -106,7 +106,7 @@ RUN npm install
 
 #Copia todos los archivos del proyecto al directorio de trabajo
 
-COPY . .
+COPY frontend .
 
 #Expone el puerto 3000 para que la aplicación sea accesible desde fuera del contenedor
 
@@ -153,7 +153,7 @@ docker-compose up --build.
 ### Despliegue de la Aplicación
 Navegar al directorio del proyecto:
 ```
-cd 
+cd pruebaciat
 ```
 ### Construir y ejecutar los contenedores:
 ```
