@@ -79,39 +79,50 @@ RUN npm install
 ```
 COPY . .
 ```
-Expone el puerto 5000 para que la aplicación sea accesible desde fuera del contenedor
+- Expone el puerto 5000 para que la aplicación sea accesible desde fuera del contenedor
+```
 EXPOSE 5000
-
-Define el comando por defecto para ejecutar la aplicación
+```
+- Define el comando por defecto para ejecutar la aplicación
+```
 CMD ["node", "index.js"]
+```
+
+# Paso 2: Crear Dockerfile para el Frontend
+### frontend/Dockerfile:
 
 
-Paso 2: Crear Dockerfile para el Frontend
-frontend/Dockerfile:
-
-
-Utiliza la imagen base de Node.js versión 14
+- Utiliza la imagen base de Node.js versión 14
+```
 FROM node:14
-Establece el directorio de trabajo dentro del contenedor
+```
+- Establece el directorio de trabajo dentro del contenedor
+```
 WORKDIR /app
-
-Copia los archivos package.json y package-lock.json al directorio de trabajo
+```
+- Copia los archivos package.json y package-lock.json al directorio de trabajo
+```
 COPY package*.json ./
-
-Instala las dependencias definidas en package.json
+```
+- Instala las dependencias definidas en package.json
+```
 RUN npm install
-
-Copia todos los archivos del proyecto al directorio de trabajo
+```
+- Copia todos los archivos del proyecto al directorio de trabajo
+```
 COPY . .
-
-Expone el puerto 3000 para que la aplicación sea accesible desde fuera del contenedor
+```
+- Expone el puerto 3000 para que la aplicación sea accesible desde fuera del contenedor
+```
 EXPOSE 3000
-
-Define el comando por defecto para iniciar la aplicación
+```
+- Define el comando por defecto para iniciar la aplicación
+```
 CMD ["npm", "start"]
-
+```
 
 #### Paso 3: Configurar Docker Compose
+```
 docker-compose.yml:
 
 version: '3.8'
@@ -135,7 +146,7 @@ services:
     environment:
       - REACT_APP_API_URL=http://localhost:5000
 
-
+```
 ### Configurar Docker Compose:
 Crear docker-compose.yml para orquestar los servicios backend y frontend.
 
