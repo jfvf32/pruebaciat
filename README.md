@@ -31,9 +31,9 @@ La interfaz debe ser intuitiva y fácil de usar para los campesinos.
 La arquitectura propuesta es una aplicación web de dos capas:
 
 - Frontend: Aplicación React que se comunica con el backend para mostrar y registrar información.
-- Backend: API RESTful construida con Node.js y Express que maneja las operaciones CRUD y se comunica con una base de datos SQLite.
+- Backend: API construida con Node.js y Express que maneja las operaciones CRUD y se comunica con una base de datos SQLite.
 
-### Modelo de Base de Datos
+# Modelo de Base de Datos
 Utilizaremos una base de datos SQLite con dos tablas principales:
 Una para las parcelas y otra para la  actividades
 
