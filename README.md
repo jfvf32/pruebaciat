@@ -61,9 +61,7 @@ backend/Dockerfile:
 ```
 # Utiliza la imagen base de Node.js versión 14
 
-  FROM node:14
-
-# Establece el directorio de trabajo dentro del contenedor
+FROM node:14
 
 WORKDIR /app
 
@@ -95,8 +93,6 @@ CMD ["node", "index.js"]
 #Utiliza la imagen base de Node.js versión 14
   
 FROM node:14
-
-#Establece el directorio de trabajo dentro del contenedor
   
 WORKDIR /app
 
