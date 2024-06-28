@@ -153,7 +153,7 @@ docker-compose up --build.
 ### Despliegue de la Aplicación
 Navegar al directorio del proyecto:
 ```
-cd my-agronomic-monitoring
+cd 
 ```
 ### Construir y ejecutar los contenedores:
 ```
